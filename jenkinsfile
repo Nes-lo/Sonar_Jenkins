@@ -31,7 +31,7 @@ pipeline{
 
        /*  stage('sonar'){
                    steps{
-                   sh "gradlew sonarqube -Dsonar.branch.targe=$(Build.SourceBranchName) -Dsonar.branch.name=$(Build.SourceBranchName)"
+                   sh "gradlew sonarqube"
                    }
            }*/
     }
