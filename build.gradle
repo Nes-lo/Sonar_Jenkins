@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'jacoco'
+    id "org.sonarqube" version "3.4.0.2513"
 }
 
 group 'co.devco'
@@ -23,7 +24,15 @@ jacocoTestReport {
         })
     }
 }
+sonarqube {
+    properties {
+        property "sonar.projectKey", "Jenkins_Sonar"
+        property "sonar.organization", "nes-lo"
+        property "sonar.host.url", "https://sonarcloud.io"
 
+        property "sonar.coverage.exclusions", "**/model/**"
+    }
+}
 repositories {
     mavenCentral()
 }
