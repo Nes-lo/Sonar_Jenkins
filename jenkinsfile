@@ -29,10 +29,10 @@ pipeline{
                 }
 
 
-       /*  stage('sonar'){
+       stage('sonar'){
                    steps{
                    sh "gradlew sonarqube"
                    }
-           }*/
+           }
     }
 }
